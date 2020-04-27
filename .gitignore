@@ -14,7 +14,7 @@ Thumbs.db
 .terraform
 terraform.tfstate
 *.tfstate*
-terraform.tfvars
+#terraform.tfvars
 *.old-dont-use
 *.csr
 *.crt

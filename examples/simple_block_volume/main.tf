@@ -7,8 +7,8 @@ module "example1" {
   default_ad                 = 0
   default_size_in_gbs        = 50
   default_backup_policy_name = "Bronze"
-  default_defined_tags  = { "TAG" = "VALUE" }
-  default_freeform_tags = { "Environment" = "Testing" }
+  default_defined_tags  = null
+  default_freeform_tags = null
 
   vols = {
 
@@ -21,7 +21,7 @@ module "example1" {
       freeform_tags      = null
       source_id          = null
       source_type        = null
-      vol_grp_name       = "vg1"
+      vol_grp_name       = null
       kms_key_id         = null
     },
     bv2 = {
@@ -31,9 +31,9 @@ module "example1" {
       backup_policy_name = "Gold"
       defined_tags       = null
       freeform_tags      = null
-      source_id    = ""
-      source_type  = "volume"
-      vol_grp_name = "vg1"
+      source_id    = null
+      source_type  = null
+      vol_grp_name = null
       kms_key_id   = null
     },
     bv3 = {
@@ -41,16 +41,17 @@ module "example1" {
       ad                 = 0
       size_in_gbs        = 65
       backup_policy_name = "Silver"
-      defined_tags  = { "Tag.Owner" = "TagValue" }
-      freeform_tags = { "Environment" = "Testing" }
+      defined_tags  = null
+      freeform_tags = null
       source_id     = null
       source_type   = null
-      vol_grp_name  = "vg2"
+      vol_grp_name  = null
       kms_key_id    = null
     }
   }
 
-  vol_grps = {
+  vol_grps = null
+  /*vol_grps = {
     vg1 = {
       compartment_id = null
       ad             = 0
@@ -65,5 +66,5 @@ module "example1" {
       defined_tags  = null
       freeform_tags = null
     }
-  }
+  }*/
 }
